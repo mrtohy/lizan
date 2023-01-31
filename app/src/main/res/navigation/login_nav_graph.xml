@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/signinFragment">
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="org.token.lizan.fragments.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/to_sign_up"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/to_password_recovery"
+            app:destination="@id/passwordRecoveryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="org.token.lizan.fragments.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/to_sign_in"
+            app:destination="@id/signinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="org.token.lizan.fragments.PasswordRecoveryFragment"
+        android:label="fragment_password_recovery"
+        tools:layout="@layout/fragment_password_recovery" >
+        <action
+            android:id="@+id/recovery_to_sign_in"
+            app:destination="@id/signinFragment" />
+    </fragment>
+</navigation>

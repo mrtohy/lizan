@@ -1,0 +1,141 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    namespace 'org.token.lizan'
+    compileSdk 33
+
+
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    defaultConfig {
+        applicationId "org.token.lizan"
+        minSdk 21
+        targetSdk 33
+        versionCode 13
+        versionName "2.1.0"
+
+        resConfigs "en", "fa","ku"
+
+        multiDexEnabled true
+
+        buildConfigField "String","SERVER_URL",'"https://parseapi.back4app.com/"'
+        buildConfigField "String","PARSE_APPLICATION_ID",'"9RTZdWmoJ4rEVpbst5rjNJtFVnD8f036k3GuDcKQ"'
+        buildConfigField "String","CLIENT_KEY",'"CD3MO8rDeouJn9jaKDuUpMLVjlTH5tFGMtvhVycF"'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a'
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    def room_version = '2.5.0'
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:2.5.0"
+
+    // optional - RxJava2 support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    // optional - RxJava3 support for Room
+    implementation "androidx.room:room-rxjava3:$room_version"
+
+    def lifecycle_version = "2.5.1"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+
+    // optional - ReactiveStreams support for LiveData
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    // (see https://github.com/ReactiveX/RxJava/releases for latest 3.x.x version)
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.6'
+
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    // For control over item selection of both touch and mouse driven selection
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+
+    implementation 'org.jsoup:jsoup:1.15.3'
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    //
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    //
+    def nav_version = "2.5.3"
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Kotlin
+//    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+//    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:4.0.0"
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+    // Kotlin
+//    implementation "androidx.transition:transition-ktx:1.4.1"
+    implementation("com.tbuonomo:dotsindicator:4.3")
+    //
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    //
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //
+    //Neshan sdk library
+//    implementation 'neshan-android-sdk:mobile-sdk:1.0.1'
+//    implementation 'neshan-android-sdk:services-sdk:1.0.0'
+//    implementation 'neshan-android-sdk:common-sdk:0.0.2'
+
+    //Play Services
+    implementation 'com.google.android.gms:play-services-gcm:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+}

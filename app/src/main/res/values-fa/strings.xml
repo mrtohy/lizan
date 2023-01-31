@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Lizan</string>
+    <string name="please_wait">لطفاَ منتظر بمانید…</string>
+    <string name="no_internet">دسترسی به ایترنت قطع می باشد</string>
+    <string name="not_connection_server">اتصال با سرور برقرار نشد</string>
+    <string name="back">قبلی</string>
+    <string name="next">بعدی</string>
+    <string name="inter">ورود</string>
+    <string name="search">"جستجو در "</string>
+    <string name="languages">زبان ها</string>
+    <string name="history">History</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="password_again">Password again</string>
+    <string name="login">LOgin</string>
+    <string name="password_recovery">Password recovery</string>
+    <string name="err_empty_fields">Fill in all the fields</string>
+    <string name="account">Account</string>
+    <string name="settings">Settings</string>
+    <string name="transactions">Transactions</string>
+    <string name="support">Support</string>
+    <string name="terms_and_privacy_policy">Terms and Privacy Policy</string>
+    <string name="email">Email</string>
+    <string name="more">more</string>
+    <string name="attributes">Attributes</string>
+    <string name="comments">Comments</string>
+    <string name="about">About</string>
+    <string name="add_comment">Add comment</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string-array name="intro_slider_descriptions">
+        <item>بهترین و زیباترین مکان های استان کردستان را مشاهده کنید</item>
+        <item>راحت و آسان تمام بوم گردی های و تور های استان را پیدا کنید</item>
+        <item>تمام صنایع دستی قشنگ و زیبای استان را از تولید کننده بخرید</item>
+    </string-array>
+    <string-array name="home_options_title">
+        <item>معرفی و آشنایی با تمام خدمات پزشکی</item>
+        <item>معرفی بهترین هتل ها و مسافرخانه ها</item>
+        <item>معرفی دستوران ها و غذا خوری های مطرح</item>
+        <item>ارائه خدمات حمل و نقل ایمن</item>
+    </string-array>
+</resources>
